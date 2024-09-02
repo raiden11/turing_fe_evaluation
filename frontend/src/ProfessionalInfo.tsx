@@ -47,21 +47,21 @@ const ProfessionalInfo: React.FC = () => {
                 </MenuItem>
                 ))}
             </TextField>
-            <FormControl fullWidth margin="normal" variant="outlined">
+            <FormControl margin="normal" variant="outlined">
                 <InputLabel>Skills</InputLabel>
                 <Select
-                multiple
-                sx={{ marginBottom: '1rem', width: '220px' }}
-                value={formData.skills}
-                onChange={handleSkillsChange}
-                input={<OutlinedInput label="Skills" />}
-                renderValue={(selected) => (
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                    {selected.map((value) => (
-                        <Chip key={value} label={value} />
-                    ))}
-                    </Box>
-                )}
+                    multiple
+                    sx={{ marginBottom: '1rem', width: '220px' }}
+                    value={formData.skills}
+                    onChange={handleSkillsChange}
+                    input={<OutlinedInput label="Skills" />}
+                    renderValue={(selected) => (
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                        {selected.map((value) => (
+                            <Chip key={value} label={value} />
+                        ))}
+                        </Box>
+                    )}
                 >
                 {skills.map((option) => (
                     <MenuItem key={option} value={option}>
