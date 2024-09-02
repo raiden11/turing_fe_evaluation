@@ -11,7 +11,8 @@ const PersonalInfo: React.FC = () => {
       age: '',
     });
   
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (event: any) => {
+      console.log(event.target.value);
       setFormData({
         ...formData,
         [event.target.name]: event.target.value,
@@ -38,11 +39,11 @@ const PersonalInfo: React.FC = () => {
             id="demo-simple-select"
             value={formData.gender}
             label="Gender"
-            // onChange={handleChange}
+            onChange={handleChange}
           >
-            <MenuItem value={"male"}>Male</MenuItem>
-            <MenuItem value={"female"}>Female</MenuItem>
-            <MenuItem value={"non_binary"}>non-Binary</MenuItem>
+            <MenuItem value={"Male"}>Male</MenuItem>
+            <MenuItem value={"Female"}>Female</MenuItem>
+            <MenuItem value={"non_binary"}>Non-Binary</MenuItem>
           </Select>
         </FormControl>
         <TextField 
