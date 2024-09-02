@@ -1,6 +1,4 @@
 
-# mytms/models.py
-
 import uuid
 from django.db import models
 
@@ -16,10 +14,6 @@ class Campaign(models.Model):
 
     class Meta:
         ordering = ['name']
-        verbose_name_plural = "Campaigns"
-
-    def __str__(self):
-        return self.name
 
 class Member(models.Model):
     """
@@ -39,10 +33,6 @@ class Member(models.Model):
 
     class Meta:
         ordering = ['full_name']
-        verbose_name_plural = "Members"
-
-    def __str__(self):
-        return f"{self.full_name} ({self.role})"
 
 class Task(models.Model):
     """
@@ -68,8 +58,4 @@ class Task(models.Model):
 
     class Meta:
         ordering = ['name']
-        verbose_name_plural = "Tasks"
-
-    def __str__(self):
-        return f"{self.name} ({self.status})"
 
