@@ -11,18 +11,22 @@ django-admin startproject backend
 python manage.py startapp mytms
 ```
 ```sh
-RUN `python manage.py startapp makemigrations`<br/>
+python manage.py startapp makemigrations
 ```
 ```sh
-RUN `python manage.py startapp migrate`<br/><br/>
+python manage.py startapp migrate
 ```
-Created models.py in mytms/models.py having the following models: Campaign, Member, Task<br/>
-Created serializers.py in mytms/serializers.py having the following serializers: CampaignSerializer, MemberSerializer, TaskSerializer<br/>
-Created superuser with username: turing, password: turing using command: `python manage.py createsuperuser`<br/>
-Created admin.py in mytms/admin.py having the following admin classes: CampaignAdmin, MemberAdmin, TaskAdmin<br/>
-Created a management command to create campaigns, members, tasks in mytms/management/commands/createdummydata.py<br/><br/>
-RUN `python manage.py createdummydata`<br/>
-- Admin panel can be accessed at: http://localhost:8000/myadmin/<br/>
+```sh
+python manage.py createdummydata
+```
+```sh
+python manage.py createsuperuser
+```
+
+- Created models.py in mytms/models.py having the following models: Campaign, Member, Task<br/>
+- Created serializers.py in mytms/serializers.py having the following serializers: CampaignSerializer, MemberSerializer, TaskSerializer<br/>
+- Created admin.py in mytms/admin.py having the following admin classes: CampaignAdmin, MemberAdmin, TaskAdmin<br/>
+- Created a management command to create campaigns, members, tasks in mytms/management/commands/createdummydata.py<br/><br/>
 
 ### Todos
 Creating viewsets
@@ -31,6 +35,7 @@ Creating viewsets
 ```sh
 python manage.py runserver
 ```
+Admin panel can be accessed at: http://localhost:8000/myadmin/<br/>
 
 
 
@@ -52,5 +57,5 @@ Implement timeout 30 minutes <br/>
 ```sh
   npm install && npm start
 ```
-
+App can be accessed at: http://localhost:3000/
 
